@@ -1,0 +1,12 @@
+Sitemap: https://www.climatis.com.br/sitemap.xml
+User-agent: HTTrack
+User-agent: puf
+User-agent: MSIECrawler
+Disallow: /
+
+Disallow: /404.html
+Disallow: /resposta-contato.html
+Disallow: /resposta-pedido-orcamento.html
+
+User-Agent: Nutch
+Disallow: /
