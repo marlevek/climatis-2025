@@ -1845,3 +1845,165 @@ button a.form-btn{
     padding-left: 1rem;
   }
 }
+
+/* PAGINA CONTATO MODERNA */
+.contact-hero {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(216, 236, 241, 0.2) 0, rgba(216, 236, 241, 0) 30%),
+    linear-gradient(120deg, rgba(10, 38, 51, 0.96) 0%, rgba(18, 57, 71, 0.93) 58%, rgba(184, 95, 43, 0.86) 100%),
+    url("../images/webp/IconeTecnicos.webp") center right / cover no-repeat;
+}
+
+.contact-channels-section,
+.contact-form-section {
+  background-color: #f4f8f7;
+}
+
+.contact-channel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.contact-channel-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1.45rem;
+  border: 1px solid rgba(216, 236, 241, 0.95);
+  border-radius: 18px;
+  background-color: var(--home-warm-white);
+  color: var(--home-ink);
+  text-decoration: none;
+  box-shadow: 0 14px 34px rgba(13, 36, 72, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-channel-card:hover {
+  color: var(--home-ink);
+  transform: translateY(-4px);
+  text-decoration: none;
+  box-shadow: 0 20px 46px rgba(13, 36, 72, 0.12);
+}
+
+.contact-channel-card i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background-color: var(--home-ice-blue);
+  color: var(--home-warm-white);
+  font-size: 1.25rem;
+}
+
+.contact-channel-card strong {
+  margin-bottom: 0.4rem;
+  color: var(--home-ice-blue-2);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.45rem;
+}
+
+.contact-channel-card span,
+.contact-form-copy p,
+.contact-info-list span {
+  color: var(--home-muted);
+  line-height: 1.6;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.contact-form-copy {
+  padding: 2rem;
+  border: 1px solid rgba(216, 236, 241, 0.95);
+  border-radius: 22px;
+  background: linear-gradient(135deg, var(--home-warm-white) 0%, #e7f4f6 100%);
+  box-shadow: 0 18px 48px rgba(13, 36, 72, 0.08);
+}
+
+.contact-form-copy h2 {
+  margin-bottom: 1rem;
+  color: var(--home-ice-blue-2);
+  font-size: clamp(1.75rem, 3vw, 2.65rem);
+}
+
+.contact-info-list {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+.contact-info-list span {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-weight: 700;
+}
+
+.contact-info-list i {
+  margin-top: 0.2rem;
+  color: var(--home-copper);
+}
+
+.contact-form-card {
+  display: grid;
+  gap: 0.85rem;
+  padding: 2rem;
+  border: 1px solid rgba(216, 236, 241, 0.95);
+  border-radius: 22px;
+  background-color: var(--home-warm-white);
+  box-shadow: 0 18px 48px rgba(13, 36, 72, 0.08);
+}
+
+.contact-form-card label {
+  margin-bottom: -0.45rem;
+  color: var(--home-ice-blue-2);
+  font-weight: 800;
+}
+
+.contact-form-card .form-control {
+  min-height: 3.15rem;
+  border: 1px solid rgba(18, 57, 71, 0.18);
+  border-radius: 12px;
+  background-color: #fff;
+  color: var(--home-ink);
+}
+
+.contact-form-card textarea.form-control {
+  min-height: 8rem;
+}
+
+.contact-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  .contact-channel-grid,
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-channel-card,
+  .contact-form-copy,
+  .contact-form-card {
+    padding: 1.35rem;
+  }
+
+  .contact-form-actions,
+  .contact-form-actions .home-btn {
+    width: 100%;
+  }
+}

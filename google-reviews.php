@@ -66,6 +66,14 @@ if ($apiKey === '' || $placeId === '') {
     ]);
 }
 
+if (!extension_loaded('openssl') && !extension_loaded('curl')) {
+    send_json([
+        'configured' => true,
+        'source' => 'fallback',
+        'message' => 'O PHP precisa da extensão OpenSSL ou cURL habilitada para consultar a Google Places API.',
+    ], 502);
+}
+
 $cached = read_cache($cacheFile, $cacheTtl);
 if ($cached !== null) {
     send_json($cached);
@@ -78,6 +86,7 @@ $context = stream_context_create([
     'http' => [
         'method' => 'GET',
         'timeout' => 6,
+        'ignore_errors' => true,
         'header' => "X-Goog-Api-Key: {$apiKey}\r\n",
     ],
 ]);
@@ -97,6 +106,15 @@ if (!is_array($data)) {
         'configured' => true,
         'source' => 'fallback',
         'message' => 'Resposta inválida do Google Places.',
+    ], 502);
+}
+
+$statusLine = $http_response_header[0] ?? '';
+if (!str_contains($statusLine, ' 200 ')) {
+    send_json([
+        'configured' => true,
+        'source' => 'fallback',
+        'message' => $data['error']['message'] ?? 'Google Places retornou uma resposta inesperada.',
     ], 502);
 }
 
