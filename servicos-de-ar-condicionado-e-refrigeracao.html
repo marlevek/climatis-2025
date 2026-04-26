@@ -213,8 +213,10 @@
                     <p>Serviços realizados para residências, comércios e empresas que precisam de ar-condicionado e refrigeração funcionando com segurança.</p>
                 </div>
                 <div class="services-social-grid">
-                    <div class="services-rating-card">
-                        <img src="images/webp/Avaliacao-Climatis-Google.webp" width="486" height="225" alt="Avaliação de clientes da Climátis no Google" loading="lazy">
+                    <div class="services-rating-card" id="googleReviewsCard">
+                        <div class="google-rating-fallback">
+                            <img src="images/webp/Avaliacao-Climatis-Google.webp" width="486" height="225" alt="Avaliação de clientes da Climátis no Google" loading="lazy">
+                        </div>
                     </div>
                     <div class="home-testimonials services-testimonials">
                         <article>
@@ -345,6 +347,44 @@
                 }
             }
         });
+
+        const googleReviewsCard = document.getElementById('googleReviewsCard');
+        const renderStars = (rating) => {
+            const rounded = Math.round(Number(rating) || 0);
+            return '★'.repeat(Math.min(5, rounded)) + '☆'.repeat(Math.max(0, 5 - rounded));
+        };
+
+        fetch('google-reviews.php')
+            .then((response) => response.ok ? response.json() : Promise.reject(response))
+            .then((data) => {
+                if (!googleReviewsCard || data.source !== 'google') {
+                    return;
+                }
+
+                const rating = data.rating ? Number(data.rating).toFixed(1).replace('.', ',') : '';
+                const totalReviews = data.total_reviews ? `${data.total_reviews} avaliações` : 'Avaliações no Google';
+                const googleUrl = data.google_maps_url || 'https://www.google.com/search?q=Clim%C3%A1tis+Curitiba+avalia%C3%A7%C3%B5es';
+                const recentReviews = Array.isArray(data.reviews) ? data.reviews.slice(0, 2) : [];
+
+                googleReviewsCard.innerHTML = `
+                    <div class="google-rating-live">
+                        <span class="home-kicker"><i class="fab fa-google"></i> Avaliações Google</span>
+                        <strong>${rating}</strong>
+                        <span class="google-rating-stars" aria-label="Nota ${rating} de 5">${renderStars(data.rating)}</span>
+                        <p>${totalReviews} no perfil da Climátis.</p>
+                        <a class="home-btn home-btn-secondary" href="${googleUrl}" target="_blank" rel="noopener">Ver perfil no Google</a>
+                        ${recentReviews.map((review) => `
+                            <blockquote>
+                                <p>"${review.text}"</p>
+                                <cite>${review.author}</cite>
+                            </blockquote>
+                        `).join('')}
+                    </div>
+                `;
+            })
+            .catch(() => {
+                // Mantém o card estático caso a API não esteja configurada ou falhe.
+            });
 
     </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
