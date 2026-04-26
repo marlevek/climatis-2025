@@ -354,7 +354,7 @@
             return '★'.repeat(Math.min(5, rounded)) + '☆'.repeat(Math.max(0, 5 - rounded));
         };
 
-        fetch('google-reviews.php')
+        fetch(`/google-reviews.php?v=${Date.now()}`, { cache: 'no-store' })
             .then((response) => response.ok ? response.json() : Promise.reject(response))
             .then((data) => {
                 if (!googleReviewsCard || data.source !== 'google') {
@@ -364,7 +364,6 @@
                 const rating = data.rating ? Number(data.rating).toFixed(1).replace('.', ',') : '';
                 const totalReviews = data.total_reviews ? `${data.total_reviews} avaliações` : 'Avaliações no Google';
                 const googleUrl = data.google_maps_url || 'https://www.google.com/search?q=Clim%C3%A1tis+Curitiba+avalia%C3%A7%C3%B5es';
-                const recentReviews = Array.isArray(data.reviews) ? data.reviews.slice(0, 2) : [];
 
                 googleReviewsCard.innerHTML = `
                     <div class="google-rating-live">
@@ -373,12 +372,6 @@
                         <span class="google-rating-stars" aria-label="Nota ${rating} de 5">${renderStars(data.rating)}</span>
                         <p>${totalReviews} no perfil da Climátis.</p>
                         <a class="home-btn home-btn-secondary" href="${googleUrl}" target="_blank" rel="noopener">Ver perfil no Google</a>
-                        ${recentReviews.map((review) => `
-                            <blockquote>
-                                <p>"${review.text}"</p>
-                                <cite>${review.author}</cite>
-                            </blockquote>
-                        `).join('')}
                     </div>
                 `;
             })

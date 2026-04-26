@@ -2007,3 +2007,177 @@ button a.form-btn{
     width: 100%;
   }
 }
+
+/* PAGINA INSTALACAO MODERNA */
+.install-hero {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(216, 236, 241, 0.2) 0, rgba(216, 236, 241, 0) 30%),
+    linear-gradient(120deg, rgba(10, 38, 51, 0.96) 0%, rgba(18, 57, 71, 0.93) 58%, rgba(184, 95, 43, 0.86) 100%),
+    url("../images/webp/img_capa_instal_AC.webp") center right / cover no-repeat;
+}
+
+.install-intro-section,
+.install-gallery-section,
+.install-maintenance-section,
+.install-form-section {
+  background-color: #f4f8f7;
+}
+
+.install-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.install-story-grid h2,
+.install-gallery-section h2 {
+  margin-bottom: 1rem;
+  color: var(--home-ice-blue-2);
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.install-story-grid p,
+.install-gallery-section p {
+  color: var(--home-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.install-benefits-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.install-carousel {
+  overflow: hidden;
+  border-radius: 22px;
+  box-shadow: 0 18px 48px rgba(13, 36, 72, 0.12);
+}
+
+.install-carousel img {
+  width: 100%;
+  height: 410px;
+  object-fit: cover;
+  background-color: #e7f4f6;
+}
+
+.install-scope-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.install-scope-card {
+  padding: 1.45rem;
+  border: 1px solid rgba(216, 236, 241, 0.95);
+  border-radius: 18px;
+  background-color: var(--home-warm-white);
+  box-shadow: 0 14px 34px rgba(13, 36, 72, 0.07);
+}
+
+.install-scope-card h3 {
+  margin-bottom: 1rem;
+  color: var(--home-ice-blue-2);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.45rem;
+}
+
+.install-scope-card ul {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+}
+
+.install-scope-card li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--home-muted);
+  line-height: 1.55;
+}
+
+.install-scope-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background-color: var(--home-copper);
+}
+
+.install-brands-section {
+  background-color: var(--home-warm-white);
+}
+
+@media (max-width: 991px) {
+  .install-story-grid,
+  .install-benefits-grid,
+  .install-scope-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .install-story-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .install-story-grid,
+  .install-benefits-grid,
+  .install-scope-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .install-carousel img {
+    height: 280px;
+  }
+
+  .install-scope-card {
+    padding: 1.25rem;
+  }
+}
+
+/* PAGINA MANUTENCAO AR-CONDICIONADO MODERNA */
+.maintenance-hero {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(216, 236, 241, 0.2) 0, rgba(216, 236, 241, 0) 30%),
+    linear-gradient(120deg, rgba(10, 38, 51, 0.96) 0%, rgba(18, 57, 71, 0.93) 58%, rgba(184, 95, 43, 0.86) 100%),
+    url("../images/webp/img_capa_manutAC.webp") center right / cover no-repeat;
+}
+
+.maintenance-intro-section,
+.maintenance-risk-section,
+.maintenance-pmoc-section,
+.maintenance-form-section {
+  background-color: #f4f8f7;
+}
+
+.maintenance-services-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.maintenance-risk-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.maintenance-check-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 991px) {
+  .maintenance-services-grid,
+  .maintenance-risk-grid,
+  .maintenance-check-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .maintenance-services-grid,
+  .maintenance-risk-grid,
+  .maintenance-check-grid {
+    grid-template-columns: 1fr;
+  }
+}

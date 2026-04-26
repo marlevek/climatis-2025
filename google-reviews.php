@@ -82,21 +82,44 @@ if ($cached !== null) {
 $url = 'https://places.googleapis.com/v1/places/' . rawurlencode($placeId)
     . '?languageCode=pt-BR&fields=displayName,rating,userRatingCount,reviews,googleMapsUri';
 
-$context = stream_context_create([
-    'http' => [
-        'method' => 'GET',
-        'timeout' => 6,
-        'ignore_errors' => true,
-        'header' => "X-Goog-Api-Key: {$apiKey}\r\n",
-    ],
-]);
+$statusCode = 0;
+$response = false;
 
-$response = @file_get_contents($url, false, $context);
+if (extension_loaded('curl')) {
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT => 8,
+        CURLOPT_HTTPHEADER => ["X-Goog-Api-Key: {$apiKey}"],
+    ]);
+
+    $response = curl_exec($ch);
+    $statusCode = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $curlError = curl_error($ch);
+    curl_close($ch);
+} else {
+    $context = stream_context_create([
+        'http' => [
+            'method' => 'GET',
+            'timeout' => 6,
+            'ignore_errors' => true,
+            'header' => "X-Goog-Api-Key: {$apiKey}\r\n",
+        ],
+    ]);
+
+    $response = @file_get_contents($url, false, $context);
+    $statusLine = $http_response_header[0] ?? '';
+    if (preg_match('/\s(\d{3})\s/', $statusLine, $matches)) {
+        $statusCode = (int) $matches[1];
+    }
+    $curlError = '';
+}
+
 if ($response === false) {
     send_json([
         'configured' => true,
         'source' => 'fallback',
-        'message' => 'Não foi possível consultar as avaliações do Google neste momento.',
+        'message' => $curlError !== '' ? $curlError : 'Não foi possível consultar as avaliações do Google neste momento.',
     ], 502);
 }
 
@@ -109,8 +132,7 @@ if (!is_array($data)) {
     ], 502);
 }
 
-$statusLine = $http_response_header[0] ?? '';
-if (!str_contains($statusLine, ' 200 ')) {
+if ($statusCode !== 200) {
     send_json([
         'configured' => true,
         'source' => 'fallback',
