@@ -237,10 +237,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <p><strong>Total estimado:</strong> ${formatCurrencyRange(data.totalMin, data.totalMax)}</p>
             ${data.recommendation.note ? `<div class="simulador-result-note">${data.recommendation.note}</div>` : ""}
             <div class="simulador-result-actions">
-                <a class="btn btn-success" href="${data.whatsappUrl}" target="_blank" rel="noopener">
+                <a class="home-btn home-btn-primary" href="${data.whatsappUrl}" target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp p-1"></i> Falar no WhatsApp
                 </a>
-                <a class="btn btn-outline-primary" href="instalacao-de-ar-condicionado.html">
+                <a class="home-btn home-btn-secondary" href="instalacao-de-ar-condicionado.html">
                     <i class="fas fa-tools p-1"></i> Ver instala&ccedil;&atilde;o
                 </a>
             </div>

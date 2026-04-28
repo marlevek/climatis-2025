@@ -8,49 +8,95 @@
     <meta name="author" content="Marcelo Zagonel Levek">
     <meta name="robots" content="follow">
     <meta name="description"
-        content="Simule o ar-condicionado ideal para o seu ambiente e veja uma estimativa de BTU, instala&ccedil;&atilde;o e investimento.">
-    <meta itemprop="name" content="Simulador de Ar-Condicionado - Climatis">
+        content="Simule o ar-condicionado ideal para o seu ambiente e veja uma estimativa de BTU, instalação e investimento.">
+    <meta itemprop="name" content="Simulador de Ar-Condicionado - Climátis">
     <meta itemprop="description"
-        content="Descubra a capacidade ideal de BTU, o tipo de instala&ccedil;&atilde;o e um or&ccedil;amento estimado para o seu ambiente.">
+        content="Descubra a capacidade ideal de BTU, o tipo de instalação e um orçamento estimado para o seu ambiente.">
     <meta itemprop="image" content="https://www.climatis.com.br/images/png/imagem-conforto-ar-condicionado.png">
-    <meta property="og:title" content="Simulador de Ar-Condicionado - Climatis">
+    <meta property="og:title" content="Simulador de Ar-Condicionado - Climátis">
     <meta property="og:description"
-        content="Veja uma estimativa r&aacute;pida do ar-condicionado ideal para resid&ecirc;ncias, com&eacute;rcios e ind&uacute;strias.">
+        content="Veja uma estimativa rápida do ar-condicionado ideal para residências, comércios e indústrias.">
     <meta property="og:url" content="https://www.climatis.com.br/simulador.html">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.climatis.com.br/images/png/imagem-conforto-ar-condicionado.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,750;9..144,850&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/889104c503.js" crossorigin="anonymous"></script>
-    <title>Simulador de Ar-Condicionado - Climatis</title>
+    <title>Simulador de Ar-Condicionado - Climátis</title>
     <link href="css/Estilos.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/gif/Climatis_favicon_atual.gif">
     <link rel="canonical" href="https://www.climatis.com.br/simulador.html">
 </head>
 
-<body>
+<body class="home-page simulador-page">
     <div id="header"></div>
 
-    <main class="simulador-page">
-        <div class="container py-5">
-            <section class="simulador-hero">
-                <h1>Diagn&oacute;stico e Or&ccedil;amento Inteligente</h1>
-                <p>
-                    Responda algumas perguntas sobre o seu ambiente para receber uma estimativa inicial de BTU,
-                    instala&ccedil;&atilde;o recomendada, faixa de investimento e um atalho pronto para falar com a
-                    Climatis no WhatsApp.
-                </p>
-                <div class="simulador-hero-badges">
-                    <span><i class="fas fa-bolt"></i> Menos de 1 minuto</span>
-                    <span><i class="fas fa-fan"></i> Sugest&atilde;o de equipamento</span>
-                    <span><i class="fas fa-tools"></i> Instala&ccedil;&atilde;o estimada</span>
+    <!--Barra de Cookies-->
+    <div class="container-fluid bg-dark aviso-cookies " id="aviso-cookies">
+        <div class="container">
+            <div class="row ">
+                <div class="col col-sm-10 gy-2">
+                    <p class="text-white">Utilizamos cookies essenciais e tecnologias semelhantes de acordo com a nossa
+                        <a href="politica-de-privacidade.html">Política de Privacidade</a> e, ao continuar navegando,
+                        você concorda com estas condições.</p>
                 </div>
-            </section>
+                <div class="col col-sm-2 gy-3">
+                    <button type="button" class="btn btn-primary btn-cookies " id="btn-cookies">Aceitar!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fundo-aviso-cookies" id="fundo-aviso-cookies"></div>
+    <!--Final barra de Cookies-->
 
-            <div class="row g-4 mt-1">
-                <div class="col-lg-7">
+    <main>
+        <section class="home-hero simulador-hero">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="home-kicker"><i class="fas fa-calculator"></i> Simulador Climátis</span>
+                        <h1>Descubra o ar-condicionado ideal para o seu ambiente</h1>
+                        <p class="home-hero-text">Responda algumas perguntas rápidas para estimar BTUs, tipo de
+                            equipamento, instalação e faixa inicial de investimento.</p>
+                        <div class="home-actions">
+                            <a class="home-btn home-btn-primary" href="#simulador-form"><i class="fas fa-play"></i>
+                                Começar simulação</a>
+                            <a class="home-btn home-btn-secondary"
+                                href="https://wa.me/5541988956598?text=Ol%C3%A1%2C%20quero%20ajuda%20para%20escolher%20um%20ar-condicionado"
+                                target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Falar com a Climátis</a>
+                        </div>
+                        <div class="home-hero-badges" aria-label="Recursos do simulador">
+                            <span>Menos de 1 minuto</span>
+                            <span>Estimativa de BTU</span>
+                            <span>Atalho para WhatsApp</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="home-hero-media">
+                            <img src="images/png/imagem-conforto-ar-condicionado.png" width="600" height="420"
+                                alt="Ambiente climatizado com ar-condicionado" loading="eager">
+                            <div class="home-hero-card">
+                                <strong>Estimativa inicial</strong>
+                                <span>O resultado ajuda a iniciar o atendimento, mas a confirmação final depende de
+                                    avaliação técnica.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-section simulador-tool-section">
+            <div class="container">
+                <div class="simulador-layout">
                     <section class="simulador-card">
-                        <h2>Preencha os dados do ambiente</h2>
+                        <span class="home-kicker"><i class="fas fa-ruler-combined"></i> Dados do ambiente</span>
+                        <h2>Preencha para calcular</h2>
                         <form id="simulador-form" novalidate>
                             <div class="simulador-form-grid">
                                 <div>
@@ -62,7 +108,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="simulador-label" for="metragem">Tamanho do ambiente (m&sup2;)</label>
+                                    <label class="simulador-label" for="metragem">Tamanho do ambiente (m²)</label>
                                     <input class="form-control" type="number" id="metragem" name="metragem" min="6"
                                         max="300" step="1" required>
                                 </div>
@@ -72,25 +118,25 @@
                                         max="100" step="1" required>
                                 </div>
                                 <div>
-                                    <label class="simulador-label" for="sol">Incid&ecirc;ncia de sol direta</label>
+                                    <label class="simulador-label" for="sol">Incidência de sol direta</label>
                                     <select class="form-select" id="sol" name="sol" required>
                                         <option value="baixa">Baixa</option>
-                                        <option value="media">M&eacute;dia</option>
+                                        <option value="media">Média</option>
                                         <option value="alta">Alta</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="simulador-label" for="infra">J&aacute; possui infraestrutura?</label>
+                                    <label class="simulador-label" for="infra">Já possui infraestrutura?</label>
                                     <select class="form-select" id="infra" name="infra" required>
                                         <option value="sim">Sim, pronta para instalar</option>
-                                        <option value="parcial">Parcial, precisa de adapta&ccedil;&otilde;es</option>
-                                        <option value="nao">N&atilde;o possui</option>
+                                        <option value="parcial">Parcial, precisa de adaptações</option>
+                                        <option value="nao">Não possui</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="simulador-label" for="uso">Tempo de uso di&aacute;rio</label>
+                                    <label class="simulador-label" for="uso">Tempo de uso diário</label>
                                     <select class="form-select" id="uso" name="uso" required>
-                                        <option value="leve">At&eacute; 4 horas por dia</option>
+                                        <option value="leve">Até 4 horas por dia</option>
                                         <option value="medio">Entre 4 e 8 horas por dia</option>
                                         <option value="intenso">Acima de 8 horas por dia</option>
                                     </select>
@@ -98,48 +144,51 @@
                                 <div class="simulador-field-full">
                                     <label class="simulador-label" for="preferencia">Tipo de aparelho desejado</label>
                                     <select class="form-select" id="preferencia" name="preferencia" required>
-                                        <option value="indiferente">Quero a melhor op&ccedil;&atilde;o para o meu caso</option>
+                                        <option value="indiferente">Quero a melhor opção para o meu caso</option>
                                         <option value="inverter">Split Hi Wall Inverter</option>
                                         <option value="cassete">Cassete</option>
                                         <option value="piso_teto">Piso Teto</option>
                                     </select>
-                                    <p class="simulador-help">
-                                        O resultado considera o perfil de uso informado e sugere o sistema com melhor
-                                        rela&ccedil;&atilde;o entre conforto, efici&ecirc;ncia e viabilidade de instala&ccedil;&atilde;o.
-                                    </p>
+                                    <p class="simulador-help">O resultado considera o perfil de uso informado e sugere o
+                                        sistema com melhor relação entre conforto, eficiência e viabilidade de instalação.</p>
                                 </div>
                                 <div class="simulador-field-full">
-                                    <button type="submit" class="btn btn-primary simulador-submit w-100">
-                                        <i class="fas fa-calculator p-1"></i> Calcular diagn&oacute;stico
+                                    <button type="submit" class="home-btn home-btn-primary simulador-submit w-100">
+                                        <i class="fas fa-calculator"></i> Calcular diagnóstico
                                     </button>
                                 </div>
                             </div>
                         </form>
                     </section>
-                </div>
 
-                <div class="col-lg-5">
-                    <section class="simulador-card simulador-card-resultado">
-                        <h3>Seu resultado estimado</h3>
+                    <aside class="simulador-card simulador-card-resultado">
+                        <span class="home-kicker"><i class="fas fa-clipboard-check"></i> Resultado</span>
+                        <h2>Estimativa do ambiente</h2>
                         <div id="simulador-resultado">
-                            <p class="simulador-placeholder">
-                                Preencha os dados ao lado para ver a recomenda&ccedil;&atilde;o de BTU, o tipo de
-                                instala&ccedil;&atilde;o e uma faixa inicial de investimento.
-                            </p>
+                            <p class="simulador-placeholder">Preencha os dados para ver a recomendação de BTU, o tipo de
+                                instalação e uma faixa inicial de investimento.</p>
                         </div>
-                    </section>
+                    </aside>
                 </div>
             </div>
+        </section>
 
-            <section class="simulador-card mt-4">
-                <h3>Importante</h3>
-                <ul class="simulador-note-list">
-                    <li>Esta simula&ccedil;&atilde;o &eacute; uma estimativa inicial para agilizar o atendimento.</li>
-                    <li>O valor final pode variar conforme marca, dist&acirc;ncia da tubula&ccedil;&atilde;o, altura da instala&ccedil;&atilde;o, adequa&ccedil;&otilde;es el&eacute;tricas e acesso ao local.</li>
-                    <li>Para projetos maiores, com&eacute;rcio pesado, m&uacute;ltiplos ambientes ou dutos, a confirma&ccedil;&atilde;o ideal &eacute; feita ap&oacute;s avalia&ccedil;&atilde;o t&eacute;cnica.</li>
-                </ul>
-            </section>
-        </div>
+        <section class="home-section simulador-note-section">
+            <div class="container">
+                <div class="home-final-panel">
+                    <div>
+                        <span class="home-kicker"><i class="fas fa-info-circle"></i> Importante</span>
+                        <h2>A simulação é uma estimativa inicial</h2>
+                        <p>O valor final pode variar conforme marca, distância da tubulação, altura da instalação,
+                            adequações elétricas e acesso ao local. Para projetos maiores, múltiplos ambientes ou dutos,
+                            a confirmação ideal é feita após avaliação técnica.</p>
+                    </div>
+                    <a class="home-btn home-btn-primary"
+                        href="https://wa.me/5541988956598?text=Ol%C3%A1%2C%20quero%20confirmar%20uma%20simula%C3%A7%C3%A3o%20de%20ar-condicionado"
+                        target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Confirmar no WhatsApp</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <div id="footer"></div>
@@ -147,6 +196,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
+    <script src="js/aviso-cookies.js"></script>
     <script src="js/include.js"></script>
     <script src="js/simulador.js" charset="utf-8"></script>
 </body>
