@@ -1,6 +1,6 @@
 async function loadComponent(id, file) { 
     try {
-        const response = await fetch(`/partials/${file}`);
+        const response = await fetch(`partials/${file}`);
         if (!response.ok) throw new Error(`Erro ao carregar ${file}`);
         const content = await response.text();
         document.getElementById(id).innerHTML = content;
