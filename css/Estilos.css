@@ -2712,9 +2712,13 @@ button a.form-btn{
     url("../images/webp/img_capa_limpeza_AC.webp") center right / cover no-repeat;
 }
 
+.cleaning-documentation-section,
 .cleaning-intro-section,
+.cleaning-audience-section,
+.cleaning-problems-section,
 .cleaning-gallery-section,
 .cleaning-video-section,
+.cleaning-attendance-section,
 .cleaning-form-section {
   background-color: #f4f8f7;
 }
@@ -2724,8 +2728,148 @@ button a.form-btn{
 }
 
 .cleaning-process-section,
+.cleaning-offers-section,
 .cleaning-steam-section {
   background-color: var(--home-warm-white);
+}
+
+.cleaning-page .company-principle-panel ul {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+}
+
+.cleaning-page .company-principle-panel li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--home-muted);
+  line-height: 1.55;
+}
+
+.cleaning-page .company-principle-panel li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background-color: var(--home-copper);
+}
+
+.cleaning-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.cleaning-inline-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.6rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid rgba(13, 110, 253, 0.16);
+  border-radius: 999px;
+  background-color: #fff;
+  color: #0c4a8a;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.cleaning-inline-links a:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.cleaning-audience-grid,
+.cleaning-offer-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cleaning-audience-grid .install-scope-card p,
+.cleaning-offer-card p {
+  color: var(--home-muted);
+  line-height: 1.6;
+}
+
+.cleaning-offer-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cleaning-offer-card ul {
+  margin: 1rem 0 1.35rem;
+}
+
+.cleaning-offer-card .home-btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+.cleaning-problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.cleaning-problem-grid span {
+  position: relative;
+  min-height: 3.6rem;
+  padding: 0.9rem 1rem 0.9rem 2.55rem;
+  border: 1px solid rgba(216, 236, 241, 0.95);
+  border-radius: 18px;
+  background-color: #fff;
+  color: var(--home-ice-blue-2);
+  font-weight: 800;
+  line-height: 1.35;
+  box-shadow: 0 12px 30px rgba(13, 36, 72, 0.06);
+}
+
+.cleaning-problem-grid span::before {
+  content: "\f071";
+  position: absolute;
+  left: 1rem;
+  top: 0.95rem;
+  color: var(--home-copper);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.cleaning-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cleaning-steps-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-height: 100%;
+  padding: 1.25rem;
+  border: 1px solid rgba(216, 236, 241, 0.95);
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 14px 34px rgba(13, 36, 72, 0.07);
+}
+
+.cleaning-steps-grid strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  background-color: var(--home-copper);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.cleaning-steps-grid span {
+  color: var(--home-muted);
+  line-height: 1.55;
 }
 
 .cleaning-carousel {
@@ -2772,13 +2916,21 @@ button a.form-btn{
 }
 
 @media (max-width: 991px) {
-  .cleaning-benefits-grid {
+  .cleaning-benefits-grid,
+  .cleaning-audience-grid,
+  .cleaning-offer-grid,
+  .cleaning-problem-grid,
+  .cleaning-steps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 767px) {
-  .cleaning-benefits-grid {
+  .cleaning-benefits-grid,
+  .cleaning-audience-grid,
+  .cleaning-offer-grid,
+  .cleaning-problem-grid,
+  .cleaning-steps-grid {
     grid-template-columns: 1fr;
   }
 

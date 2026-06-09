@@ -9,7 +9,19 @@ async function loadComponent(id, file) {
     }
 }
 
+function loadWidget() {
+    // Evita duplicar caso a tag já exista inline na página
+    if (document.querySelector('script[src*="atendesite.com.br/widget.js"]')) return;
+    const widget = document.createElement("script");
+    widget.src = "https://api.atendesite.com.br/widget.js?v=2";
+    widget.setAttribute("data-tenant", "climatis");
+    widget.setAttribute("data-bottom", "180");
+    widget.defer = true;
+    document.body.appendChild(widget);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     loadComponent("header", "header.html");
     loadComponent("footer", "footer.html");
+    loadWidget();
 });
