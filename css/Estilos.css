@@ -2669,37 +2669,195 @@ button a.form-btn{
     url("../images/webp/img_capa_manutAC.webp") center right / cover no-repeat;
 }
 
-.maintenance-intro-section,
+.maintenance-control-section,
+.maintenance-audience-section,
 .maintenance-risk-section,
+.maintenance-documentation-section,
+.maintenance-attendance-section,
 .maintenance-pmoc-section,
 .maintenance-form-section {
   background-color: #f4f8f7;
 }
 
-.maintenance-services-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.maintenance-types-section,
+.maintenance-preventive-section,
+.maintenance-check-section {
+  background-color: var(--home-warm-white);
 }
 
-.maintenance-risk-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
+.maintenance-services-grid,
+.maintenance-audience-grid,
 .maintenance-check-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.maintenance-page .company-principle-panel ul {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+}
+
+.maintenance-page .company-principle-panel li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--home-muted);
+  line-height: 1.55;
+}
+
+.maintenance-page .company-principle-panel li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background-color: var(--home-copper);
+}
+
+.maintenance-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.maintenance-inline-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.6rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid rgba(13, 110, 253, 0.16);
+  border-radius: 999px;
+  background-color: #fff;
+  color: #0c4a8a;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.maintenance-inline-links a:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.maintenance-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.maintenance-type-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.maintenance-type-card p,
+.maintenance-audience-grid .install-scope-card p,
+.maintenance-risk-note {
+  color: var(--home-muted);
+  line-height: 1.6;
+}
+
+.maintenance-type-card ul {
+  margin: 1rem 0 1.35rem;
+}
+
+.maintenance-type-card .home-btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+.maintenance-problem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.maintenance-problem-grid span {
+  position: relative;
+  min-height: 3.6rem;
+  padding: 0.9rem 1rem 0.9rem 2.55rem;
+  border: 1px solid rgba(216, 236, 241, 0.95);
+  border-radius: 18px;
+  background-color: #fff;
+  color: var(--home-ice-blue-2);
+  font-weight: 800;
+  line-height: 1.35;
+  box-shadow: 0 12px 30px rgba(13, 36, 72, 0.06);
+}
+
+.maintenance-problem-grid span::before {
+  content: "\f071";
+  position: absolute;
+  left: 1rem;
+  top: 0.95rem;
+  color: var(--home-copper);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.maintenance-risk-note {
+  max-width: 900px;
+  margin: 1.2rem auto 0;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--home-copper);
+  border-radius: 12px;
+  background-color: #fff;
+  font-weight: 700;
+}
+
+.maintenance-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.maintenance-steps-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-height: 100%;
+  padding: 1.25rem;
+  border: 1px solid rgba(216, 236, 241, 0.95);
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 14px 34px rgba(13, 36, 72, 0.07);
+}
+
+.maintenance-steps-grid strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  background-color: var(--home-copper);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.maintenance-steps-grid span {
+  color: var(--home-muted);
+  line-height: 1.55;
+}
+
 @media (max-width: 991px) {
   .maintenance-services-grid,
-  .maintenance-risk-grid,
-  .maintenance-check-grid {
+  .maintenance-audience-grid,
+  .maintenance-check-grid,
+  .maintenance-steps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 767px) {
   .maintenance-services-grid,
-  .maintenance-risk-grid,
-  .maintenance-check-grid {
+  .maintenance-audience-grid,
+  .maintenance-check-grid,
+  .maintenance-type-grid,
+  .maintenance-problem-grid,
+  .maintenance-steps-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -2980,9 +3138,13 @@ button a.form-btn{
     url("../images/webp/img_capa_PMOC_AC.webp") center right / cover no-repeat;
 }
 
+.pmoc-authority-section,
 .pmoc-intro-section,
+.pmoc-audience-section,
 .pmoc-health-section,
+.pmoc-deliverables-section,
 .pmoc-plans-section,
+.pmoc-implementation-section,
 .pmoc-faq-section,
 .pmoc-form-section {
   background-color: #f4f8f7;
@@ -2993,13 +3155,102 @@ button a.form-btn{
   background-color: var(--home-warm-white);
 }
 
-.pmoc-benefits-grid {
+.pmoc-page .company-principle-panel ul {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+}
+
+.pmoc-page .company-principle-panel li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--home-muted);
+  line-height: 1.55;
+}
+
+.pmoc-page .company-principle-panel li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background-color: var(--home-copper);
+}
+
+.pmoc-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.pmoc-inline-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.6rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid rgba(13, 110, 253, 0.16);
+  border-radius: 999px;
+  background-color: #fff;
+  color: #0c4a8a;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.pmoc-inline-links a:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.pmoc-benefits-grid,
+.pmoc-audience-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.pmoc-audience-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pmoc-audience-grid .install-scope-card p {
+  color: var(--home-muted);
+  line-height: 1.6;
+}
+
+.pmoc-deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.pmoc-deliverables-grid span {
+  position: relative;
+  min-height: 3.5rem;
+  padding: 0.9rem 1rem 0.9rem 2.45rem;
+  border: 1px solid rgba(216, 236, 241, 0.95);
+  border-radius: 18px;
+  background-color: #fff;
+  color: var(--home-ice-blue-2);
+  font-weight: 800;
+  line-height: 1.35;
+  box-shadow: 0 12px 30px rgba(13, 36, 72, 0.06);
+}
+
+.pmoc-deliverables-grid span::before {
+  content: "\f058";
+  position: absolute;
+  left: 1rem;
+  top: 0.95rem;
+  color: var(--home-copper);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 .pmoc-plan-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
 }
 
@@ -3070,8 +3321,55 @@ button a.form-btn{
   background-color: var(--home-copper);
 }
 
+.pmoc-plan-card .home-btn {
+  width: 100%;
+  margin-top: auto;
+}
+
 .pmoc-risk-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pmoc-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pmoc-steps-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-height: 100%;
+  padding: 1.25rem;
+  border: 1px solid rgba(216, 236, 241, 0.95);
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 14px 34px rgba(13, 36, 72, 0.07);
+}
+
+.pmoc-steps-grid strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  background-color: var(--home-copper);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.pmoc-steps-grid h3 {
+  margin: 0;
+  color: var(--home-ice-blue-2);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.2rem;
+}
+
+.pmoc-steps-grid span {
+  color: var(--home-muted);
+  line-height: 1.55;
 }
 
 .pmoc-faq-list {
@@ -3129,7 +3427,10 @@ button a.form-btn{
 }
 
 @media (max-width: 991px) {
-  .pmoc-benefits-grid {
+  .pmoc-benefits-grid,
+  .pmoc-audience-grid,
+  .pmoc-risk-grid,
+  .pmoc-steps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -3140,7 +3441,10 @@ button a.form-btn{
 
 @media (max-width: 767px) {
   .pmoc-benefits-grid,
-  .pmoc-risk-grid {
+  .pmoc-audience-grid,
+  .pmoc-deliverables-grid,
+  .pmoc-risk-grid,
+  .pmoc-steps-grid {
     grid-template-columns: 1fr;
   }
 
