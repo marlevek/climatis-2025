@@ -3566,6 +3566,35 @@ button a.form-btn{
     url("../images/webp/img_Freezer.webp") center right / cover no-repeat;
 }
 
+.cold-room-hero {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(216, 236, 241, 0.2) 0, rgba(216, 236, 241, 0) 30%),
+    linear-gradient(120deg, rgba(10, 38, 51, 0.96) 0%, rgba(18, 57, 71, 0.93) 56%, rgba(184, 95, 43, 0.86) 100%),
+    url("../images/webp/img_CamaraFria.webp") center right / cover no-repeat;
+}
+
+.cold-room-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+  border-radius: 20px;
+}
+
+.cold-room-page .home-hero-content h1 {
+  hyphens: none;
+}
+
+.cold-room-types-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 767px) {
+  .cold-room-types-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .climatizer-hero {
   background:
     radial-gradient(circle at 78% 18%, rgba(216, 236, 241, 0.22) 0, rgba(216, 236, 241, 0) 30%),

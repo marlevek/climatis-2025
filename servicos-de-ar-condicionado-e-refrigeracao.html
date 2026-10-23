@@ -151,9 +151,16 @@
                             <img src="images/png/img_refrigeracao_comercial.png" width="320" height="180" alt="Refrigeração comercial Curitiba">
                             <span class="home-service-icon"><i class="fas fa-temperature-low"></i></span>
                             <strong>Refrigeração Comercial</strong>
-                            <span>Manutenção em freezers, máquinas de gelo e climatizadores comerciais.</span>
+                            <span>Manutenção em câmaras frias, freezers, máquinas de gelo e climatizadores comerciais.</span>
                         </a>
                     </section>
+                    <a class="home-service-card" href="manutencao-de-camara-fria.html">
+                        <img src="images/webp/img_CamaraFria.webp" width="320" height="180"
+                            alt="Manutenção de câmara fria em Curitiba" loading="lazy">
+                        <span class="home-service-icon"><i class="fas fa-snowflake"></i></span>
+                        <strong>Manutenção de câmara fria</strong>
+                        <span>Manutenção preventiva e corretiva para câmaras de resfriados e congelados.</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -261,6 +268,7 @@
                         <a href="refrigeracao-comercial.html">Refrigeração Comercial</a>
                         <a href="manutencao-de-maquina-de-gelo.html">Máquina de Gelo Everest</a>
                         <a href="manutencao-de-freezer.html">Manutenção de Freezer</a>
+                        <a href="manutencao-de-camara-fria.html">Manutenção de Câmara Fria</a>
                         <a href="manutencao-de-climatizadores.html">Manutenção de Climatizadores</a>
                     </div>
                 </div>
@@ -314,15 +322,18 @@
                 { name: 'Limpeza de Ar Condicionado', description: 'Higienização completa para melhorar a qualidade do ar.', link: 'limpeza-de-ar-condicionado.html' },
                 { name: 'PMOC para Ar Condicionado', description: 'Plano de manutenção PMOC.', link: 'pmoc-para-ar-condicionado.html' },
                 { name: 'Manutenção de Máquina de Gelo', description: 'Serviço especializado de manutenção para máquinas de gelo Everest.', link: 'manutencao-de-maquina-de-gelo.html' },
+                { name: 'Manutenção de Câmara Fria', description: 'Manutenção preventiva e corretiva de câmara fria para resfriados e congelados.', link: 'manutencao-de-camara-fria.html' },
                 { name: 'Manutenção de Freezer', description: 'Serviço especializado de manutenção para freezers.', link: 'manutencao-de-freezer.html' },
                 { name: 'Manutenção de Climatizadores', description: 'Serviço especializado de manutenção para climatizadores.', link: 'manutencao-de-climatizadores.html' },
-                { name: 'Refrigeração Comercial', description: 'Manutenção em freezers, máquinas de gelo e climatizadores comerciais.', link: 'refrigeracao-comercial.html' },
+                { name: 'Refrigeração Comercial', description: 'Manutenção em câmaras frias, freezers, máquinas de gelo e climatizadores comerciais.', link: 'refrigeracao-comercial.html' },
             ];
 
             // Filtra os serviços com base na busca
+            const normalizeSearch = (text) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+            const normalizedQuery = normalizeSearch(query);
             const results = services.filter(service =>
-                service.name.toLowerCase().includes(query.toLowerCase()) ||
-                service.description.toLowerCase().includes(query.toLowerCase())
+                normalizeSearch(service.name).includes(normalizedQuery) ||
+                normalizeSearch(service.description).includes(normalizedQuery)
             );
 
             // Exibe os resultados
@@ -391,7 +402,7 @@
     </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-<script src="js/include.js"></script>
+<script src="js/include.js?v=atendimento-1"></script>
 </body>
 
 </html>

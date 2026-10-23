@@ -84,6 +84,11 @@
         <priority>0.80</priority>
     </url>
     <url>
+        <loc>https://www.climatis.com.br/manutencao-de-camara-fria.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
         <loc>https://www.climatis.com.br/manutencao-de-freezer.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.80</priority>

@@ -10,12 +10,10 @@ async function loadComponent(id, file) {
 }
 
 function loadWidget() {
-    // Evita duplicar caso a tag já exista inline na página
-    if (document.querySelector('script[src*="atendesite.com.br/widget.js"]')) return;
+    // O carregador compartilhado define a saudação conforme a página atual.
+    if (document.querySelector('script[src*="js/atendimento.js"]')) return;
     const widget = document.createElement("script");
-    widget.src = "https://api.atendesite.com.br/widget.js?v=2";
-    widget.setAttribute("data-tenant", "climatis");
-    widget.setAttribute("data-bottom", "180");
+    widget.src = "js/atendimento.js?v=1";
     widget.defer = true;
     document.body.appendChild(widget);
 }
