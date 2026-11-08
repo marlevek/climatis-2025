@@ -3585,6 +3585,62 @@ button a.form-btn{
   hyphens: none;
 }
 
+/* Lote 6: ajustes restritos ao card e à página de câmaras frias. */
+.home-cold-room-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-cold-room-card .home-cold-room-card-cta {
+  margin-top: auto;
+  color: var(--home-copper-dark);
+  font-weight: 800;
+}
+
+.home-cold-room-card-cta > span {
+  display: inline;
+  padding: 0;
+  color: inherit;
+}
+
+.home-cold-room-card:focus-visible,
+.cold-room-page .home-btn:focus-visible,
+.cold-room-page .faq-accordion summary:focus-visible {
+  outline: 3px solid var(--home-copper);
+  outline-offset: 4px;
+}
+
+.cold-room-page .cold-room-section-note {
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  color: var(--home-muted);
+  line-height: 1.7;
+  text-align: center;
+}
+
+.cold-room-page .cold-room-cta-section .home-feature-panel {
+  border-color: var(--home-copper);
+  background: linear-gradient(135deg, var(--home-warm-white), #e7f4f6);
+}
+
+.cold-room-page .cold-room-cta-section .home-btn {
+  flex-shrink: 0;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.cold-room-page .cold-room-faq-section {
+  background-color: #f4f8f7;
+}
+
+.cold-room-page .contact-form-grid > * {
+  min-width: 0;
+}
+
+.cold-room-page .contact-info-list a {
+  overflow-wrap: anywhere;
+}
+
 .cold-room-types-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
