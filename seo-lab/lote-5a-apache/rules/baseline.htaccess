@@ -1,0 +1,4 @@
+Redirect 301 /aparelhos-de-ar-condicionado-e-refrigeracao.html https://www.climatis.com.br/aparelhos-de-ar-condicionado.html
+
+# Exibe a página personalizada e preserva o status HTTP 404.
+ErrorDocument 404 /404.html

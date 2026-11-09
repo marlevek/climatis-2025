@@ -1,0 +1,42 @@
+[
+  {
+    "name": "loop-proxy-https",
+    "url": "https://www.climatis.com.br/",
+    "method": "GET",
+    "body": "",
+    "headers": {},
+    "expected_url": null,
+    "expected_status": 200,
+    "max_redirects": 1,
+    "expected_redirects": null,
+    "initial_status": null,
+    "contains": null,
+    "content_type": null,
+    "echo_body": false,
+    "multipart": false,
+    "expected_loop": true,
+    "expectation": "Detectar loop de 302 quando TLS termina na borda e a origem testa HTTPS=off",
+    "limitation": "Fixtures; não valida WordPress/HostGator reais",
+    "canonical": "https://www.climatis.com.br/"
+  },
+  {
+    "name": "loop-proxy-index",
+    "url": "https://www.climatis.com.br/index.html",
+    "method": "GET",
+    "body": "",
+    "headers": {},
+    "expected_url": null,
+    "expected_status": 200,
+    "max_redirects": 1,
+    "expected_redirects": null,
+    "initial_status": null,
+    "contains": null,
+    "content_type": null,
+    "echo_body": false,
+    "multipart": false,
+    "expected_loop": true,
+    "expectation": "Detectar normalização de index seguida de loop por HTTPS=off",
+    "limitation": "Fixtures; não valida WordPress/HostGator reais",
+    "canonical": "https://www.climatis.com.br/"
+  }
+]

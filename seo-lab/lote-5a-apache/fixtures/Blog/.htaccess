@@ -1,0 +1,14 @@
+# RECONSTRUCAO REPRESENTATIVA: arquivo remoto completo nao disponibilizado.
+# Este bloco de cache e uma fixture, nao codigo do plugin W3 Total Cache.
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} ^(?:GET|HEAD)$
+RewriteCond %{REQUEST_URI} ^/Blog/cache-fixture/$
+RewriteRule ^cache-fixture/$ /Blog/cache/cached.html [L]
+
+# Estrutura padrao WordPress conhecida, exclusiva do laboratorio.
+RewriteBase /Blog/
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /Blog/index.php [L]

@@ -1,0 +1,78 @@
+{
+  "docker_version": {
+    "Client": {
+      "Version": "29.9.1",
+      "ApiVersion": "1.56",
+      "DefaultAPIVersion": "1.56",
+      "GitCommit": "dfc520d",
+      "GoVersion": "go1.26.9",
+      "Os": "windows",
+      "Arch": "amd64",
+      "BuildTime": "Wed Oct 14 18:34:24 2026",
+      "Context": "desktop-linux"
+    },
+    "Server": {
+      "Platform": {
+        "Name": "Docker Desktop 4.96.0 (243774)"
+      },
+      "Version": "29.9.1",
+      "ApiVersion": "1.56",
+      "MinAPIVersion": "1.40",
+      "Os": "linux",
+      "Arch": "amd64",
+      "Components": [
+        {
+          "Name": "Engine",
+          "Version": "29.9.1",
+          "Details": {
+            "ApiVersion": "1.56",
+            "Arch": "amd64",
+            "BuildTime": "Wed Oct 14 18:32:24 2026",
+            "Experimental": "false",
+            "GitCommit": "b26fb77",
+            "GoVersion": "go1.26.9",
+            "KernelVersion": "5.15.167.4-microsoft-standard-WSL2",
+            "MinAPIVersion": "1.40",
+            "Module": "github.com/moby/moby/v2",
+            "ModuleVersion": "v2.0.0+unknown",
+            "Os": "linux"
+          }
+        },
+        {
+          "Name": "containerd",
+          "Version": "v2.4.2",
+          "Details": {
+            "GitCommit": "b7a25261e029d68978bbf290df0a62fc819b3c51"
+          }
+        },
+        {
+          "Name": "runc",
+          "Version": "1.5.2",
+          "Details": {
+            "GitCommit": "v1.5.2-0-g29dd3dc2"
+          }
+        },
+        {
+          "Name": "docker-init",
+          "Version": "0.19.0",
+          "Details": {
+            "GitCommit": "de40ad0"
+          }
+        }
+      ],
+      "GitCommit": "b26fb77",
+      "GoVersion": "go1.26.9",
+      "KernelVersion": "5.15.167.4-microsoft-standard-WSL2",
+      "BuildTime": "2026-10-14T18:32:24.000000000+00:00"
+    }
+  },
+  "compose_version": "Docker Compose version v5.6.0",
+  "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+  "base_image": "php@sha256:884f64b47174de2c0e813270fe7b24a18605729fcebe201302d98c38805530d0",
+  "apache": "Server version: Apache/2.4.69 (Debian)\nServer built:   2026-10-01T16:54:08\n",
+  "php": "PHP 8.4.27 (cli) (built: Nov  5 2026 07:23:32) (NTS)\nCopyright (c) The PHP Group\nBuilt by https://github.com/docker-library/php\nZend Engine v4.4.27, Copyright (c) Zend Technologies\n    with Zend OPcache v8.4.27, Copyright (c), by Zend Technologies\n",
+  "openssl": "OpenSSL 3.5.7 9 Jun 2026 (Library: OpenSSL 3.5.7 9 Jun 2026)\n",
+  "modules": "Loaded Modules:\n core_module (static)\n so_module (static)\n watchdog_module (static)\n http_module (static)\n log_config_module (static)\n logio_module (static)\n version_module (static)\n unixd_module (static)\n access_compat_module (shared)\n alias_module (shared)\n auth_basic_module (shared)\n authn_core_module (shared)\n authn_file_module (shared)\n authz_core_module (shared)\n authz_host_module (shared)\n authz_user_module (shared)\n autoindex_module (shared)\n deflate_module (shared)\n dir_module (shared)\n env_module (shared)\n filter_module (shared)\n headers_module (shared)\n mime_module (shared)\n mpm_prefork_module (shared)\n negotiation_module (shared)\n php_module (shared)\n proxy_module (shared)\n proxy_http_module (shared)\n reqtimeout_module (shared)\n rewrite_module (shared)\n setenvif_module (shared)\n socache_shmcb_module (shared)\n ssl_module (shared)\n status_module (shared)\n",
+  "syntax": "Syntax OK\n",
+  "image": "sha256:a7a3f8120633958824dbb56ef2f7a32704682f2dab191c117678cd1bc84b839f"
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "case": "proxy-edge-fixed-headers-0001",
+    "test": "proxy-sobrescreve-xfp",
+    "scenario": "proxy-edge-fixed-headers",
+    "policy": "candidate",
+    "method": "POST",
+    "original_url": "http://www.climatis.com.br/api/echo.php",
+    "initial_status": 200,
+    "location": null,
+    "redirect_count": 0,
+    "final_url": "http://www.climatis.com.br/api/echo.php",
+    "final_status": 200,
+    "expected": {
+      "url": "http://www.climatis.com.br/api/echo.php",
+      "status": 200,
+      "redirects": 0,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "http://www.climatis.com.br/api/echo.php",
+          "method": "POST",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:53:40 GMT",
+            "server": "Apache",
+            "content-length": "297",
+            "content-type": "application/json; charset=utf-8",
+            "connection": "close"
+          },
+          "body_sha256": "706da897151980bb0fde2adb03e247de2e124c5b7b59c023a9672ea5c3a107c4",
+          "body_base64": "eyJmaXh0dXJlIjoiZWNobyIsIm1ldGhvZCI6IlBPU1QiLCJib2R5X2J5dGVzIjo3LCJib2R5X3NoYTI1NiI6ImYxNmQwNWVjNmIyOTI0OGQyYzYxYWRiMWU5MjYzZjc4ZTRmN2JhY2UxYjk1NTAxNGEyZDE3ODcyY2ZlNDA2NGQiLCJwb3N0IjpbXSwiZmlsZXMiOltdLCJxdWVyeSI6IiIsInVyaSI6Ii9hcGkvZWNoby5waHAiLCJodHRwcyI6Im9mZiIsImZvcndhcmRlZF9wcm90byI6Imh0dHAiLCJyZWRpcmVjdF9zdGF0dXMiOiIiLCJwYXJlbnRfbWFya2VyIjpudWxsLCJ0cnVzdF9wcm94eV9maXh0dXJlX29ubHkiOnRydWV9"
+        }
+      ],
+      "redirect_count": 0,
+      "loop": false,
+      "error": null,
+      "final_url": "http://www.climatis.com.br/api/echo.php",
+      "final_status": 200
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:53:40.487983+00:00"
+  },
+  {
+    "case": "proxy-edge-fixed-headers-0002",
+    "test": "proxy-sobrescreve-xfp",
+    "scenario": "proxy-edge-fixed-headers",
+    "policy": "candidate",
+    "method": "POST",
+    "original_url": "https://www.climatis.com.br/api/echo.php",
+    "initial_status": 200,
+    "location": null,
+    "redirect_count": 0,
+    "final_url": "https://www.climatis.com.br/api/echo.php",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/api/echo.php",
+      "status": 200,
+      "redirects": 0,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "https://www.climatis.com.br/api/echo.php",
+          "method": "POST",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:53:40 GMT",
+            "server": "Apache",
+            "content-length": "298",
+            "content-type": "application/json; charset=utf-8",
+            "connection": "close"
+          },
+          "body_sha256": "b3246fc88cbccc2d82a3b12d97a564218107026cc0aaa946fb80bc1d5056178c",
+          "body_base64": "eyJmaXh0dXJlIjoiZWNobyIsIm1ldGhvZCI6IlBPU1QiLCJib2R5X2J5dGVzIjo3LCJib2R5X3NoYTI1NiI6ImYxNmQwNWVjNmIyOTI0OGQyYzYxYWRiMWU5MjYzZjc4ZTRmN2JhY2UxYjk1NTAxNGEyZDE3ODcyY2ZlNDA2NGQiLCJwb3N0IjpbXSwiZmlsZXMiOltdLCJxdWVyeSI6IiIsInVyaSI6Ii9hcGkvZWNoby5waHAiLCJodHRwcyI6Im9mZiIsImZvcndhcmRlZF9wcm90byI6Imh0dHBzIiwicmVkaXJlY3Rfc3RhdHVzIjoiIiwicGFyZW50X21hcmtlciI6bnVsbCwidHJ1c3RfcHJveHlfZml4dHVyZV9vbmx5Ijp0cnVlfQ=="
+        }
+      ],
+      "redirect_count": 0,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/api/echo.php",
+      "final_status": 200
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:53:40.493417+00:00"
+  }
+]

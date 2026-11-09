@@ -1,0 +1,139 @@
+[
+  {
+    "case": "precedence-directory-0001",
+    "test": "precedencia-modulos",
+    "scenario": "precedence-directory",
+    "policy": "candidate",
+    "method": "GET",
+    "original_url": "https://www.climatis.com.br/module-order",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/rewrite-order.html",
+    "redirect_count": 1,
+    "final_url": "https://www.climatis.com.br/rewrite-order.html",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/alias-order.html",
+      "status": 200,
+      "redirects": 1,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "https://www.climatis.com.br/module-order",
+          "method": "GET",
+          "status": 302,
+          "location": "https://www.climatis.com.br/rewrite-order.html",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:46:17 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/rewrite-order.html",
+            "content-length": "270",
+            "connection": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+          },
+          "body_sha256": "949193ebf94e193c5a71f28ffe781be280363c4913725644704597d42cd9150a",
+          "body_base64": "PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvaHRtbDQvc3RyaWN0LmR0ZCI+CjxodG1sPjxoZWFkPgo8dGl0bGU+MzAyIEZvdW5kPC90aXRsZT4KPC9oZWFkPjxib2R5Pgo8aDE+Rm91bmQ8L2gxPgo8cD5UaGUgZG9jdW1lbnQgaGFzIG1vdmVkIDxhIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici9yZXdyaXRlLW9yZGVyLmh0bWwiPmhlcmU8L2E+LjwvcD4KPC9ib2R5PjwvaHRtbD4K"
+        },
+        {
+          "url": "https://www.climatis.com.br/rewrite-order.html",
+          "method": "GET",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:46:17 GMT",
+            "server": "Apache",
+            "last-modified": "Mon, 09 Nov 2026 13:46:14 GMT",
+            "etag": "\"1b-65fd82f80c56f\"",
+            "accept-ranges": "bytes",
+            "content-length": "27",
+            "connection": "close",
+            "content-type": "text/html"
+          },
+          "body_sha256": "a303e94c0d0d7b4cc186c4da3635f4ef31887d5dcf186c38433a9862683c3ce0",
+          "body_base64": "cHJlY2VkZW5jZS1maXh0dXJlOnJld3JpdGUK"
+        }
+      ],
+      "redirect_count": 1,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/rewrite-order.html",
+      "final_status": 200
+    },
+    "passed": false,
+    "errors": [
+      "URL final diferente do destino literal esperado"
+    ],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:46:17.578161+00:00"
+  },
+  {
+    "case": "precedence-directory-0002",
+    "test": "precedencia-modulos",
+    "scenario": "precedence-directory",
+    "policy": "candidate",
+    "method": "HEAD",
+    "original_url": "https://www.climatis.com.br/module-order",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/rewrite-order.html",
+    "redirect_count": 1,
+    "final_url": "https://www.climatis.com.br/rewrite-order.html",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/alias-order.html",
+      "status": 200,
+      "redirects": 1,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "https://www.climatis.com.br/module-order",
+          "method": "HEAD",
+          "status": 302,
+          "location": "https://www.climatis.com.br/rewrite-order.html",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:46:17 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/rewrite-order.html",
+            "connection": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+          },
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_base64": ""
+        },
+        {
+          "url": "https://www.climatis.com.br/rewrite-order.html",
+          "method": "HEAD",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:46:17 GMT",
+            "server": "Apache",
+            "last-modified": "Mon, 09 Nov 2026 13:46:14 GMT",
+            "etag": "\"1b-65fd82f80c56f\"",
+            "accept-ranges": "bytes",
+            "content-length": "27",
+            "connection": "close",
+            "content-type": "text/html"
+          },
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_base64": ""
+        }
+      ],
+      "redirect_count": 1,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/rewrite-order.html",
+      "final_status": 200
+    },
+    "passed": false,
+    "errors": [
+      "URL final diferente do destino literal esperado"
+    ],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:46:17.589050+00:00"
+  }
+]

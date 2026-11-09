@@ -1,0 +1,510 @@
+[
+  {
+    "case": "proxy-edge-fixed-query-0001",
+    "test": "blog-sem-barra-query",
+    "scenario": "proxy-edge-fixed-query",
+    "policy": "candidate",
+    "method": "GET",
+    "original_url": "http://climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "redirect_count": 1,
+    "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "status": 200,
+      "redirects": 1,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "http://climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "GET",
+          "status": 302,
+          "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:57 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+            "content-length": "435",
+            "connection": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+          },
+          "body_sha256": "15b63e9160f7ef70463d2b721ba66dee80b387d334bd2e0a852fc12a36ae7b17",
+          "body_base64": "PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvaHRtbDQvc3RyaWN0LmR0ZCI+CjxodG1sPjxoZWFkPgo8dGl0bGU+MzAyIEZvdW5kPC90aXRsZT4KPC9oZWFkPjxib2R5Pgo8aDE+Rm91bmQ8L2gxPgo8cD5UaGUgZG9jdW1lbnQgaGFzIG1vdmVkIDxhIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici9CbG9nLz94PTElMjAyJmFtcDt4PTIlMkIzJmFtcDt2YXppbz0mYW1wO21haXM9YStiJmFtcDtjb2Q9YSUyNmIlM0RjJmFtcDttYXJjYT0lMjMmYW1wO2ludGVycm9nYWNhbz0lM0YmYW1wO2R1cGxvPSUyNTIwIj5oZXJlPC9hPi48L3A+Cjxocj4KPGFkZHJlc3M+QXBhY2hlIFNlcnZlciBhdCBjbGltYXRpcy5jb20uYnIgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K"
+        },
+        {
+          "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "GET",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:57 GMT",
+            "server": "Apache",
+            "vary": "Accept-Encoding",
+            "content-length": "121",
+            "content-type": "text/html; charset=utf-8",
+            "connection": "close"
+          },
+          "body_sha256": "302c80b931e752b79031941ddd86e05c08828167a366dd91e8250fcdd8bdf7ca",
+          "body_base64": "PGh0bWw+PGhlYWQ+PGxpbmsgcmVsPSJjYW5vbmljYWwiIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici9CbG9nLyI+PC9oZWFkPjxib2R5PmJsb2ctZml4dHVyZTovQmxvZy88L2JvZHk+PC9odG1sPg=="
+        }
+      ],
+      "redirect_count": 1,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "final_status": 200
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:48:58.002466+00:00"
+  },
+  {
+    "case": "proxy-edge-fixed-query-0002",
+    "test": "blog-sem-barra-query",
+    "scenario": "proxy-edge-fixed-query",
+    "policy": "candidate",
+    "method": "HEAD",
+    "original_url": "http://climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "redirect_count": 1,
+    "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "status": 200,
+      "redirects": 1,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "http://climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "HEAD",
+          "status": 302,
+          "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+            "connection": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+          },
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_base64": ""
+        },
+        {
+          "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "HEAD",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "content-type": "text/html; charset=utf-8",
+            "connection": "close"
+          },
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_base64": ""
+        }
+      ],
+      "redirect_count": 1,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "final_status": 200
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:48:58.012898+00:00"
+  },
+  {
+    "case": "proxy-edge-fixed-query-0003",
+    "test": "blog-sem-barra-query",
+    "scenario": "proxy-edge-fixed-query",
+    "policy": "candidate",
+    "method": "GET",
+    "original_url": "http://www.climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "redirect_count": 1,
+    "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "status": 200,
+      "redirects": 1,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "http://www.climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "GET",
+          "status": 302,
+          "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+            "content-length": "439",
+            "connection": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+          },
+          "body_sha256": "f79a8e2444b4410d5548afd01ede202808ba8909e0765ab33fb12340e69788d6",
+          "body_base64": "PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvaHRtbDQvc3RyaWN0LmR0ZCI+CjxodG1sPjxoZWFkPgo8dGl0bGU+MzAyIEZvdW5kPC90aXRsZT4KPC9oZWFkPjxib2R5Pgo8aDE+Rm91bmQ8L2gxPgo8cD5UaGUgZG9jdW1lbnQgaGFzIG1vdmVkIDxhIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici9CbG9nLz94PTElMjAyJmFtcDt4PTIlMkIzJmFtcDt2YXppbz0mYW1wO21haXM9YStiJmFtcDtjb2Q9YSUyNmIlM0RjJmFtcDttYXJjYT0lMjMmYW1wO2ludGVycm9nYWNhbz0lM0YmYW1wO2R1cGxvPSUyNTIwIj5oZXJlPC9hPi48L3A+Cjxocj4KPGFkZHJlc3M+QXBhY2hlIFNlcnZlciBhdCB3d3cuY2xpbWF0aXMuY29tLmJyIFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg=="
+        },
+        {
+          "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "GET",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "vary": "Accept-Encoding",
+            "content-length": "121",
+            "content-type": "text/html; charset=utf-8",
+            "connection": "close"
+          },
+          "body_sha256": "302c80b931e752b79031941ddd86e05c08828167a366dd91e8250fcdd8bdf7ca",
+          "body_base64": "PGh0bWw+PGhlYWQ+PGxpbmsgcmVsPSJjYW5vbmljYWwiIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici9CbG9nLyI+PC9oZWFkPjxib2R5PmJsb2ctZml4dHVyZTovQmxvZy88L2JvZHk+PC9odG1sPg=="
+        }
+      ],
+      "redirect_count": 1,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "final_status": 200
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:48:58.023330+00:00"
+  },
+  {
+    "case": "proxy-edge-fixed-query-0004",
+    "test": "blog-sem-barra-query",
+    "scenario": "proxy-edge-fixed-query",
+    "policy": "candidate",
+    "method": "HEAD",
+    "original_url": "http://www.climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "redirect_count": 1,
+    "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "status": 200,
+      "redirects": 1,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "http://www.climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "HEAD",
+          "status": 302,
+          "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+            "connection": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+          },
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_base64": ""
+        },
+        {
+          "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "HEAD",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "content-type": "text/html; charset=utf-8",
+            "connection": "close"
+          },
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_base64": ""
+        }
+      ],
+      "redirect_count": 1,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "final_status": 200
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:48:58.033613+00:00"
+  },
+  {
+    "case": "proxy-edge-fixed-query-0005",
+    "test": "blog-sem-barra-query",
+    "scenario": "proxy-edge-fixed-query",
+    "policy": "candidate",
+    "method": "GET",
+    "original_url": "https://climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "redirect_count": 1,
+    "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "status": 200,
+      "redirects": 1,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "https://climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "GET",
+          "status": 302,
+          "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+            "content-length": "436",
+            "connection": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+          },
+          "body_sha256": "4a9bb80b66decff59af311b01d065b4809e0a5be1e8a54a3a6ea3438f5575faf",
+          "body_base64": "PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvaHRtbDQvc3RyaWN0LmR0ZCI+CjxodG1sPjxoZWFkPgo8dGl0bGU+MzAyIEZvdW5kPC90aXRsZT4KPC9oZWFkPjxib2R5Pgo8aDE+Rm91bmQ8L2gxPgo8cD5UaGUgZG9jdW1lbnQgaGFzIG1vdmVkIDxhIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici9CbG9nLz94PTElMjAyJmFtcDt4PTIlMkIzJmFtcDt2YXppbz0mYW1wO21haXM9YStiJmFtcDtjb2Q9YSUyNmIlM0RjJmFtcDttYXJjYT0lMjMmYW1wO2ludGVycm9nYWNhbz0lM0YmYW1wO2R1cGxvPSUyNTIwIj5oZXJlPC9hPi48L3A+Cjxocj4KPGFkZHJlc3M+QXBhY2hlIFNlcnZlciBhdCBjbGltYXRpcy5jb20uYnIgUG9ydCA0NDM8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg=="
+        },
+        {
+          "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "GET",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "vary": "Accept-Encoding",
+            "content-length": "121",
+            "content-type": "text/html; charset=utf-8",
+            "connection": "close"
+          },
+          "body_sha256": "302c80b931e752b79031941ddd86e05c08828167a366dd91e8250fcdd8bdf7ca",
+          "body_base64": "PGh0bWw+PGhlYWQ+PGxpbmsgcmVsPSJjYW5vbmljYWwiIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici9CbG9nLyI+PC9oZWFkPjxib2R5PmJsb2ctZml4dHVyZTovQmxvZy88L2JvZHk+PC9odG1sPg=="
+        }
+      ],
+      "redirect_count": 1,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "final_status": 200
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:48:58.041804+00:00"
+  },
+  {
+    "case": "proxy-edge-fixed-query-0006",
+    "test": "blog-sem-barra-query",
+    "scenario": "proxy-edge-fixed-query",
+    "policy": "candidate",
+    "method": "HEAD",
+    "original_url": "https://climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "redirect_count": 1,
+    "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "status": 200,
+      "redirects": 1,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "https://climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "HEAD",
+          "status": 302,
+          "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+            "connection": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+          },
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_base64": ""
+        },
+        {
+          "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "HEAD",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "content-type": "text/html; charset=utf-8",
+            "connection": "close"
+          },
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_base64": ""
+        }
+      ],
+      "redirect_count": 1,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "final_status": 200
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:48:58.053905+00:00"
+  },
+  {
+    "case": "proxy-edge-fixed-query-0007",
+    "test": "blog-sem-barra-query",
+    "scenario": "proxy-edge-fixed-query",
+    "policy": "candidate",
+    "method": "GET",
+    "original_url": "https://www.climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "redirect_count": 1,
+    "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "status": 200,
+      "redirects": 1,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "https://www.climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "GET",
+          "status": 302,
+          "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+            "content-length": "440",
+            "connection": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+          },
+          "body_sha256": "e4c100677d475746692fd4c371721f5c637dd15a53a0afa408911e5fff25b78c",
+          "body_base64": "PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvaHRtbDQvc3RyaWN0LmR0ZCI+CjxodG1sPjxoZWFkPgo8dGl0bGU+MzAyIEZvdW5kPC90aXRsZT4KPC9oZWFkPjxib2R5Pgo8aDE+Rm91bmQ8L2gxPgo8cD5UaGUgZG9jdW1lbnQgaGFzIG1vdmVkIDxhIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici9CbG9nLz94PTElMjAyJmFtcDt4PTIlMkIzJmFtcDt2YXppbz0mYW1wO21haXM9YStiJmFtcDtjb2Q9YSUyNmIlM0RjJmFtcDttYXJjYT0lMjMmYW1wO2ludGVycm9nYWNhbz0lM0YmYW1wO2R1cGxvPSUyNTIwIj5oZXJlPC9hPi48L3A+Cjxocj4KPGFkZHJlc3M+QXBhY2hlIFNlcnZlciBhdCB3d3cuY2xpbWF0aXMuY29tLmJyIFBvcnQgNDQzPC9hZGRyZXNzPgo8L2JvZHk+PC9odG1sPgo="
+        },
+        {
+          "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "GET",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "vary": "Accept-Encoding",
+            "content-length": "121",
+            "content-type": "text/html; charset=utf-8",
+            "connection": "close"
+          },
+          "body_sha256": "302c80b931e752b79031941ddd86e05c08828167a366dd91e8250fcdd8bdf7ca",
+          "body_base64": "PGh0bWw+PGhlYWQ+PGxpbmsgcmVsPSJjYW5vbmljYWwiIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici9CbG9nLyI+PC9oZWFkPjxib2R5PmJsb2ctZml4dHVyZTovQmxvZy88L2JvZHk+PC9odG1sPg=="
+        }
+      ],
+      "redirect_count": 1,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "final_status": 200
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:48:58.062929+00:00"
+  },
+  {
+    "case": "proxy-edge-fixed-query-0008",
+    "test": "blog-sem-barra-query",
+    "scenario": "proxy-edge-fixed-query",
+    "policy": "candidate",
+    "method": "HEAD",
+    "original_url": "https://www.climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "redirect_count": 1,
+    "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "status": 200,
+      "redirects": 1,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "https://www.climatis.com.br/Blog?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "HEAD",
+          "status": 302,
+          "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+            "connection": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+          },
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_base64": ""
+        },
+        {
+          "url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+          "method": "HEAD",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:48:58 GMT",
+            "server": "Apache",
+            "content-type": "text/html; charset=utf-8",
+            "connection": "close"
+          },
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_base64": ""
+        }
+      ],
+      "redirect_count": 1,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/Blog/?x=1%202&x=2%2B3&vazio=&mais=a+b&cod=a%26b%3Dc&marca=%23&interrogacao=%3F&duplo=%2520",
+      "final_status": 200
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:48:58.070592+00:00"
+  }
+]

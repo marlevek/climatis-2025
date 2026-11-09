@@ -1,0 +1,50 @@
+[
+  {
+    "case": "merge-candidate-0001",
+    "test": "mesclagem-pai",
+    "scenario": "merge-candidate",
+    "policy": "candidate",
+    "method": "GET",
+    "original_url": "https://www.climatis.com.br/api/echo.php",
+    "initial_status": 200,
+    "location": null,
+    "redirect_count": 0,
+    "final_url": "https://www.climatis.com.br/api/echo.php",
+    "final_status": 200,
+    "expected": {
+      "url": "https://www.climatis.com.br/api/echo.php",
+      "status": 200,
+      "redirects": 0,
+      "max_redirects": 1,
+      "loop": false
+    },
+    "observed": {
+      "hops": [
+        {
+          "url": "https://www.climatis.com.br/api/echo.php",
+          "method": "GET",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:46:10 GMT",
+            "server": "Apache",
+            "content-length": "294",
+            "connection": "close",
+            "content-type": "application/json; charset=utf-8"
+          },
+          "body_sha256": "82610cfda756347b10a65abc8caadd2712f70e9bdd6bfa8c295808a01316179a",
+          "body_base64": "eyJmaXh0dXJlIjoiZWNobyIsIm1ldGhvZCI6IkdFVCIsImJvZHlfYnl0ZXMiOjAsImJvZHlfc2hhMjU2IjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsInBvc3QiOltdLCJmaWxlcyI6W10sInF1ZXJ5IjoiIiwidXJpIjoiL2FwaS9lY2hvLnBocCIsImh0dHBzIjoib24iLCJmb3J3YXJkZWRfcHJvdG8iOm51bGwsInJlZGlyZWN0X3N0YXR1cyI6IiIsInBhcmVudF9tYXJrZXIiOm51bGwsInRydXN0X3Byb3h5X2ZpeHR1cmVfb25seSI6ZmFsc2V9"
+        }
+      ],
+      "redirect_count": 0,
+      "loop": false,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/api/echo.php",
+      "final_status": 200
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:46:10.676359+00:00"
+  }
+]

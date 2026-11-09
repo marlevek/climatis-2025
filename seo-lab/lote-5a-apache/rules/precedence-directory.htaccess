@@ -1,0 +1,8 @@
+Redirect 301 /aparelhos-de-ar-condicionado-e-refrigeracao.html https://www.climatis.com.br/aparelhos-de-ar-condicionado.html
+
+# Exibe a página personalizada e preserva o status HTTP 404.
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+RewriteRule ^module-order$ https://www.climatis.com.br/rewrite-order.html [R=302,L]
+Redirect 302 /module-order https://www.climatis.com.br/alias-order.html

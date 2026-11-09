@@ -1,0 +1,161 @@
+{
+  "name": "climatis-seo5a-b2-e4d8dd70",
+  "networks": {
+    "isolated": {
+      "name": "climatis-seo5a-b2-e4d8dd70_isolated",
+      "ipam": {},
+      "internal": true,
+      "enable_ipv6": false
+    }
+  },
+  "services": {
+    "backend": {
+      "profiles": [
+        "proxy"
+      ],
+      "restart": "no",
+      "cap_drop": [
+        "NET_RAW"
+      ],
+      "cpus": 1,
+      "command": null,
+      "entrypoint": null,
+      "environment": {
+        "LAB_CONTENT_CANONICAL": "0",
+        "LAB_MODE": "candidate-root",
+        "LAB_ROLE": "origin",
+        "LAB_TRUST_PROXY": "1"
+      },
+      "image": "climatis-seo5a-apache-lab:20261109",
+      "init": true,
+      "mem_limit": "268435456",
+      "networks": {
+        "isolated": null
+      },
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "D:\\Backup_windows\\Wamp_www\\Climatis_website_26\\seo-lab\\lote-5a-apache\\certs",
+          "target": "/opt/lab/certs",
+          "read_only": true
+        }
+      ],
+      "build": {
+        "context": "D:\\Backup_windows\\Wamp_www\\Climatis_website_26\\seo-lab\\lote-5a-apache",
+        "dockerfile": "Dockerfile"
+      }
+    },
+    "direct": {
+      "profiles": [
+        "direct"
+      ],
+      "restart": "no",
+      "cap_drop": [
+        "NET_RAW"
+      ],
+      "cpus": 1,
+      "command": null,
+      "entrypoint": null,
+      "environment": {
+        "LAB_MODE": "baseline",
+        "LAB_ROLE": "origin",
+        "LAB_TRUST_PROXY": "0"
+      },
+      "image": "climatis-seo5a-apache-lab:20261109",
+      "init": true,
+      "mem_limit": "268435456",
+      "networks": {
+        "isolated": null
+      },
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "D:\\Backup_windows\\Wamp_www\\Climatis_website_26\\seo-lab\\lote-5a-apache\\certs",
+          "target": "/opt/lab/certs",
+          "read_only": true
+        }
+      ],
+      "build": {
+        "context": "D:\\Backup_windows\\Wamp_www\\Climatis_website_26\\seo-lab\\lote-5a-apache",
+        "dockerfile": "Dockerfile"
+      }
+    },
+    "edge": {
+      "profiles": [
+        "proxy"
+      ],
+      "restart": "no",
+      "cap_drop": [
+        "NET_RAW"
+      ],
+      "cpus": 1,
+      "command": null,
+      "entrypoint": null,
+      "environment": {
+        "LAB_MODE": "proxy-naive",
+        "LAB_ROLE": "edge",
+        "LAB_TRUST_PROXY": "0"
+      },
+      "image": "climatis-seo5a-apache-lab:20261109",
+      "init": true,
+      "mem_limit": "268435456",
+      "networks": {
+        "isolated": null
+      },
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "D:\\Backup_windows\\Wamp_www\\Climatis_website_26\\seo-lab\\lote-5a-apache\\certs",
+          "target": "/opt/lab/certs",
+          "read_only": true
+        }
+      ],
+      "build": {
+        "context": "D:\\Backup_windows\\Wamp_www\\Climatis_website_26\\seo-lab\\lote-5a-apache",
+        "dockerfile": "Dockerfile"
+      },
+      "depends_on": {
+        "backend": {
+          "condition": "service_started",
+          "required": true
+        }
+      }
+    }
+  },
+  "x-runtime": {
+    "build": {
+      "context": "."
+    },
+    "cap_drop": [
+      "NET_RAW"
+    ],
+    "cpus": 1,
+    "image": "climatis-seo5a-apache-lab:20261109",
+    "init": true,
+    "mem_limit": "256m",
+    "networks": [
+      "isolated"
+    ],
+    "restart": "no",
+    "security_opt": [
+      "no-new-privileges:true"
+    ],
+    "volumes": [
+      {
+        "read_only": true,
+        "source": "./certs",
+        "target": "/opt/lab/certs",
+        "type": "bind"
+      }
+    ]
+  }
+}

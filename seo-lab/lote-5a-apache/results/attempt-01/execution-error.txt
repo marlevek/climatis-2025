@@ -1,0 +1,1 @@
+RuntimeError: Apache não ficou disponível: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente

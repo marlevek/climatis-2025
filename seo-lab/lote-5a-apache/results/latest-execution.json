@@ -1,0 +1,8 @@
+{
+  "selected": [
+    "proxy-edge-fixed-headers"
+  ],
+  "image_id": "sha256:809f9267ccac55a05022b75c804bdda4facd6ac649ffa31580726a49553d8627",
+  "client_image": "python@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1",
+  "started_at": "2026-11-09T13:53:38.047841+00:00"
+}

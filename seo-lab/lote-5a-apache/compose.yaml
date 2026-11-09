@@ -1,0 +1,49 @@
+name: climatis-seo5a-b2
+x-runtime: &runtime
+  image: climatis-seo5a-apache-lab:20261109
+  build:
+    context: .
+  init: true
+  restart: "no"
+  mem_limit: 256m
+  cpus: 1.0
+  security_opt:
+    - no-new-privileges:true
+  cap_drop:
+    - NET_RAW
+  networks:
+    - isolated
+  volumes:
+    - type: bind
+      source: ./certs
+      target: /opt/lab/certs
+      read_only: true
+services:
+  direct:
+    <<: *runtime
+    profiles: [direct]
+    environment:
+      LAB_MODE: ${LAB_MODE:-baseline}
+      LAB_ROLE: origin
+      LAB_TRUST_PROXY: "0"
+  backend:
+    <<: *runtime
+    profiles: [proxy]
+    environment:
+      LAB_MODE: ${BACKEND_MODE:-candidate-root}
+      LAB_ROLE: origin
+      LAB_TRUST_PROXY: "1"
+      LAB_CONTENT_CANONICAL: ${LAB_CONTENT_CANONICAL:-0}
+  edge:
+    <<: *runtime
+    profiles: [proxy]
+    environment:
+      LAB_MODE: ${EDGE_MODE:-proxy-naive}
+      LAB_ROLE: edge
+      LAB_TRUST_PROXY: "0"
+    depends_on:
+      - backend
+networks:
+  isolated:
+    internal: true
+    enable_ipv6: false

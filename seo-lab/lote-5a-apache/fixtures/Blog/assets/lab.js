@@ -1,0 +1,1 @@
+window.blogFixture = true;

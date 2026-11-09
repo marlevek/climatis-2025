@@ -1,0 +1,15 @@
+{
+  "fixture": "echo",
+  "method": "GET",
+  "body_bytes": 0,
+  "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "post": [],
+  "files": [],
+  "query": "",
+  "uri": "/api/echo.php",
+  "https": "on",
+  "forwarded_proto": null,
+  "redirect_status": "",
+  "parent_marker": "seen",
+  "trust_proxy_fixture_only": false
+}

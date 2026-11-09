@@ -1,0 +1,104 @@
+[
+  {
+    "case": "proxy-vhost-naive-0001",
+    "test": "loop-proxy-https",
+    "scenario": "proxy-vhost-naive",
+    "policy": "counterexample",
+    "method": "GET",
+    "original_url": "https://www.climatis.com.br/",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/",
+    "redirect_count": 1,
+    "final_url": "https://www.climatis.com.br/",
+    "final_status": 302,
+    "expected": "Detectar loop de 302 quando TLS termina na borda e a origem testa HTTPS=off",
+    "observed": {
+      "hops": [
+        {
+          "url": "https://www.climatis.com.br/",
+          "method": "GET",
+          "status": 302,
+          "location": "https://www.climatis.com.br/",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:41:18 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/",
+            "content-length": "252",
+            "content-type": "text/html; charset=iso-8859-1",
+            "connection": "close"
+          },
+          "body_sha256": "6e711ddfac5e853233f93d82cb3f9643bacb4d8a6d488352ffe98439ba705f86",
+          "body_base64": "PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvaHRtbDQvc3RyaWN0LmR0ZCI+CjxodG1sPjxoZWFkPgo8dGl0bGU+MzAyIEZvdW5kPC90aXRsZT4KPC9oZWFkPjxib2R5Pgo8aDE+Rm91bmQ8L2gxPgo8cD5UaGUgZG9jdW1lbnQgaGFzIG1vdmVkIDxhIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici8iPmhlcmU8L2E+LjwvcD4KPC9ib2R5PjwvaHRtbD4K"
+        }
+      ],
+      "redirect_count": 1,
+      "loop": true,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/",
+      "final_status": 302
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:41:18.594696+00:00"
+  },
+  {
+    "case": "proxy-vhost-naive-0002",
+    "test": "loop-proxy-index",
+    "scenario": "proxy-vhost-naive",
+    "policy": "counterexample",
+    "method": "GET",
+    "original_url": "https://www.climatis.com.br/index.html",
+    "initial_status": 302,
+    "location": "https://www.climatis.com.br/",
+    "redirect_count": 2,
+    "final_url": "https://www.climatis.com.br/",
+    "final_status": 302,
+    "expected": "Detectar normalização de index seguida de loop por HTTPS=off",
+    "observed": {
+      "hops": [
+        {
+          "url": "https://www.climatis.com.br/index.html",
+          "method": "GET",
+          "status": 302,
+          "location": "https://www.climatis.com.br/",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:41:18 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/",
+            "content-length": "252",
+            "content-type": "text/html; charset=iso-8859-1",
+            "connection": "close"
+          },
+          "body_sha256": "6e711ddfac5e853233f93d82cb3f9643bacb4d8a6d488352ffe98439ba705f86",
+          "body_base64": "PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvaHRtbDQvc3RyaWN0LmR0ZCI+CjxodG1sPjxoZWFkPgo8dGl0bGU+MzAyIEZvdW5kPC90aXRsZT4KPC9oZWFkPjxib2R5Pgo8aDE+Rm91bmQ8L2gxPgo8cD5UaGUgZG9jdW1lbnQgaGFzIG1vdmVkIDxhIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici8iPmhlcmU8L2E+LjwvcD4KPC9ib2R5PjwvaHRtbD4K"
+        },
+        {
+          "url": "https://www.climatis.com.br/",
+          "method": "GET",
+          "status": 302,
+          "location": "https://www.climatis.com.br/",
+          "headers": {
+            "date": "Mon, 09 Nov 2026 13:41:18 GMT",
+            "server": "Apache",
+            "location": "https://www.climatis.com.br/",
+            "content-length": "252",
+            "content-type": "text/html; charset=iso-8859-1",
+            "connection": "close"
+          },
+          "body_sha256": "6e711ddfac5e853233f93d82cb3f9643bacb4d8a6d488352ffe98439ba705f86",
+          "body_base64": "PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvaHRtbDQvc3RyaWN0LmR0ZCI+CjxodG1sPjxoZWFkPgo8dGl0bGU+MzAyIEZvdW5kPC90aXRsZT4KPC9oZWFkPjxib2R5Pgo8aDE+Rm91bmQ8L2gxPgo8cD5UaGUgZG9jdW1lbnQgaGFzIG1vdmVkIDxhIGhyZWY9Imh0dHBzOi8vd3d3LmNsaW1hdGlzLmNvbS5ici8iPmhlcmU8L2E+LjwvcD4KPC9ib2R5PjwvaHRtbD4K"
+        }
+      ],
+      "redirect_count": 2,
+      "loop": true,
+      "error": null,
+      "final_url": "https://www.climatis.com.br/",
+      "final_status": 302
+    },
+    "passed": true,
+    "errors": [],
+    "limitations": "Fixtures; não valida WordPress/HostGator reais",
+    "executed_at": "2026-11-09T13:41:18.611243+00:00"
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "scenarios": {
+    "baseline": {
+      "executed": 280,
+      "passed": 280,
+      "failed": 0,
+      "failed_groups": {}
+    },
+    "candidate-root": {
+      "executed": 322,
+      "passed": 262,
+      "failed": 60,
+      "failed_groups": {
+        "rota:/Blog/artigo-valido/": 4,
+        "rota:/Blog/category/climatizacao/": 4,
+        "rota:/Blog/feed/": 4,
+        "rota:/Blog/wp-json/": 6,
+        "rota:/Blog/?rest_route=%2Fwp%2Fv2%2Ftypes": 6,
+        "rota:/Blog/assets/lab.css": 6,
+        "rota:/Blog/assets/lab.js": 6,
+        "rota:/Blog/assets/pixel.png": 6,
+        "rota:/Blog/cache-fixture/": 6,
+        "rota:/Blog/inexistente-fixture/": 6,
+        "rota:/internals/route": 6
+      }
+    },
+    "candidate-vhost": {
+      "executed": 322,
+      "passed": 322,
+      "failed": 0,
+      "failed_groups": {}
+    },
+    "merge-baseline": {
+      "executed": 1,
+      "passed": 1,
+      "failed": 0,
+      "failed_groups": {}
+    },
+    "merge-candidate": {
+      "executed": 1,
+      "passed": 1,
+      "failed": 0,
+      "failed_groups": {}
+    },
+    "precedence-directory": {
+      "executed": 2,
+      "passed": 0,
+      "failed": 2,
+      "failed_groups": {
+        "precedencia-modulos": 2
+      }
+    },
+    "precedence-directory-verified": {
+      "executed": 2,
+      "passed": 2,
+      "failed": 0,
+      "failed_groups": {}
+    },
+    "precedence-vhost": {
+      "executed": 5,
+      "passed": 5,
+      "failed": 0,
+      "failed_groups": {}
+    },
+    "proxy-root-naive": {
+      "executed": 2,
+      "passed": 2,
+      "failed": 0,
+      "failed_groups": {}
+    },
+    "proxy-vhost-naive": {
+      "executed": 2,
+      "passed": 2,
+      "failed": 0,
+      "failed_groups": {}
+    },
+    "proxy-edge": {
+      "executed": 322,
+      "passed": 316,
+      "failed": 6,
+      "failed_groups": {
+        "rota:/Blog": 6
+      }
+    },
+    "proxy-edge-fixed": {
+      "executed": 322,
+      "passed": 322,
+      "failed": 0,
+      "failed_groups": {}
+    },
+    "proxy-edge-fixed-query": {
+      "executed": 8,
+      "passed": 8,
+      "failed": 0,
+      "failed_groups": {}
+    },
+    "proxy-edge-fixed-headers": {
+      "executed": 2,
+      "passed": 2,
+      "failed": 0,
+      "failed_groups": {}
+    }
+  },
+  "error": null,
+  "cleanup": {
+    "attempted": true,
+    "successful": true,
+    "output": " Container climatis-seo5a-b2-e4d8dd70-edge-1 Stopping \n Container climatis-seo5a-b2-e4d8dd70-edge-1 Stopped \n Container climatis-seo5a-b2-e4d8dd70-edge-1 Removing \n Container climatis-seo5a-b2-e4d8dd70-edge-1 Removed \n Container climatis-seo5a-b2-e4d8dd70-backend-1 Stopping \n Container climatis-seo5a-b2-e4d8dd70-backend-1 Stopped \n Container climatis-seo5a-b2-e4d8dd70-backend-1 Removing \n Container climatis-seo5a-b2-e4d8dd70-backend-1 Removed \n Network climatis-seo5a-b2-e4d8dd70_isolated Removing \n Network climatis-seo5a-b2-e4d8dd70_isolated Removed \n"
+  },
+  "executed_cases": 1593
+}

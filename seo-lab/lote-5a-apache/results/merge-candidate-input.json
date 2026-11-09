@@ -1,0 +1,24 @@
+[
+  {
+    "name": "mesclagem-pai",
+    "url": "https://www.climatis.com.br/api/echo.php",
+    "method": "GET",
+    "body": "",
+    "headers": {},
+    "expected_url": "https://www.climatis.com.br/api/echo.php",
+    "expected_status": 200,
+    "max_redirects": 1,
+    "expected_redirects": 0,
+    "initial_status": null,
+    "contains": null,
+    "content_type": null,
+    "echo_body": true,
+    "multipart": false,
+    "expected_loop": false,
+    "expectation": "",
+    "limitation": "Fixtures; não valida WordPress/HostGator reais",
+    "canonical": "https://www.climatis.com.br/",
+    "parent_expected": "absent",
+    "transport": "normal"
+  }
+]

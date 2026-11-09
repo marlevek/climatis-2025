@@ -1,0 +1,9 @@
+certs
+results
+__pycache__
+*.pyc
+.git
+*.md
+*.json
+*.py
+*.ps1

@@ -1,0 +1,10 @@
+{
+  "scenarios": {},
+  "error": "RuntimeError: Apache não ficou disponível: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente",
+  "cleanup": {
+    "attempted": true,
+    "successful": true,
+    "output": " Container climatis-seo5a-b2-e4d8dd70-direct-1 Stopping \n Container climatis-seo5a-b2-e4d8dd70-direct-1 Stopped \n Container climatis-seo5a-b2-e4d8dd70-direct-1 Removing \n Container climatis-seo5a-b2-e4d8dd70-direct-1 Removed \n Network climatis-seo5a-b2-e4d8dd70_isolated Removing \n Network climatis-seo5a-b2-e4d8dd70_isolated Removed \n"
+  },
+  "executed_cases": 0
+}

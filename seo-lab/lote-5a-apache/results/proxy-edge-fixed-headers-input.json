@@ -1,0 +1,54 @@
+[
+  {
+    "name": "proxy-sobrescreve-xfp",
+    "url": "http://www.climatis.com.br/api/echo.php",
+    "method": "POST",
+    "body": "Zml4dHVyZQ==",
+    "headers": {
+      "Content-Type": "text/plain",
+      "X-Forwarded-Proto": "https"
+    },
+    "expected_url": "http://www.climatis.com.br/api/echo.php",
+    "expected_status": 200,
+    "max_redirects": 1,
+    "expected_redirects": 0,
+    "initial_status": null,
+    "contains": null,
+    "content_type": "application/json",
+    "echo_body": true,
+    "multipart": false,
+    "expected_loop": false,
+    "expectation": "",
+    "limitation": "Fixtures; não valida WordPress/HostGator reais",
+    "canonical": "https://www.climatis.com.br/",
+    "parent_expected": null,
+    "transport": "normal",
+    "forwarded_expected": "http"
+  },
+  {
+    "name": "proxy-sobrescreve-xfp",
+    "url": "https://www.climatis.com.br/api/echo.php",
+    "method": "POST",
+    "body": "Zml4dHVyZQ==",
+    "headers": {
+      "Content-Type": "text/plain",
+      "X-Forwarded-Proto": "http"
+    },
+    "expected_url": "https://www.climatis.com.br/api/echo.php",
+    "expected_status": 200,
+    "max_redirects": 1,
+    "expected_redirects": 0,
+    "initial_status": null,
+    "contains": null,
+    "content_type": "application/json",
+    "echo_body": true,
+    "multipart": false,
+    "expected_loop": false,
+    "expectation": "",
+    "limitation": "Fixtures; não valida WordPress/HostGator reais",
+    "canonical": "https://www.climatis.com.br/",
+    "parent_expected": null,
+    "transport": "normal",
+    "forwarded_expected": "https"
+  }
+]

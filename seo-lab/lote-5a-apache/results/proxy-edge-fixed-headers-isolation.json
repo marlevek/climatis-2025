@@ -1,0 +1,50 @@
+{
+  "containers": [
+    {
+      "name": "/climatis-seo5a-b2-e4d8dd70-backend-1",
+      "image": "sha256:809f9267ccac55a05022b75c804bdda4facd6ac649ffa31580726a49553d8627",
+      "ports": {},
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "D:\\Backup_windows\\Wamp_www\\Climatis_website_26\\seo-lab\\lote-5a-apache\\certs",
+          "Destination": "/opt/lab/certs",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ]
+    },
+    {
+      "name": "/climatis-seo5a-b2-e4d8dd70-edge-1",
+      "image": "sha256:809f9267ccac55a05022b75c804bdda4facd6ac649ffa31580726a49553d8627",
+      "ports": {},
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "D:\\Backup_windows\\Wamp_www\\Climatis_website_26\\seo-lab\\lote-5a-apache\\certs",
+          "Destination": "/opt/lab/certs",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ]
+    }
+  ],
+  "networks": [
+    {
+      "name": "climatis-seo5a-b2-e4d8dd70_isolated",
+      "internal": true,
+      "ipam": {
+        "Driver": "default",
+        "Options": null,
+        "Config": [
+          {
+            "Subnet": "172.22.0.0/16",
+            "Gateway": "172.22.0.1"
+          }
+        ]
+      }
+    }
+  ]
+}
